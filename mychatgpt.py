@@ -2,6 +2,7 @@
 """
 Created on Mon Mar 13 18:47:42 2023
 
+2023.3.21: openai把接口更改。
 
 @author: admin
 """
@@ -54,5 +55,5 @@ def chat(prompt, text):
     # 打印模型返回的信息
     print(completions)
     # 获取模型返回的最佳响应，并返回该响应的内容
-    ans = completions.choices[0].text
+    ans = completions.choices[0].message.content
     return ans
