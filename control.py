@@ -80,27 +80,3 @@ get_data()
 #             continue
 #     except (KeyboardInterrupt, SystemExit):
 #         scheduler.shutdown()
-
-
-
-# # 定义调度器
-# scheduler = BackgroundScheduler()
-
-# # 添加定时任务
-# scheduler.add_job(get_data, 'interval', seconds=60)
-
-# # 夜晚12:00到第二天8:00不执行任务
-# scheduler.add_job(paused, 'cron', hour='0-7,20-23')
-
-# # 12:00到下午2:00不执行任务
-# scheduler.add_job(paused, 'cron', hour='12-14')
-
-
-# if __name__ == '__main__':
-#     # 启动调度器
-#     scheduler.start()
-#     try:
-#         while True:
-#             continue
-#     except (KeyboardInterrupt, SystemExit):
-#         scheduler.shutdown()
