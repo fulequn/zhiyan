@@ -267,7 +267,7 @@ def get_bilibili_subtitles_json(blink):
                     "cid":cid_list[i]
                 }
         
-        response = requests.get(url, params=params, headers=headers)
+        response = requests.get(url, params=params, headers=headers, timeout=10)
 
         subtitles = response.json()['data']['subtitle']['subtitles']
         if subtitles != []:
@@ -283,7 +283,7 @@ def get_bilibili_subtitles_json(blink):
 
             if response.status_code == 200:
                 contents = [x['content'] for x in response.json()['body']]
-                content += "。".join(contents)
+                content += "视频子标题：" + cid_part[i] + "。".join(contents)
                 print("=============字幕加载成功=============")
                 # print(content)
     return info+content
