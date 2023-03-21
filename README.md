@@ -21,5 +21,5 @@
 这个项目感谢所有的贡献者
 
  <a href="https://github.com/fulequn/zhiyan/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=fulequn/zhiyan" />
+    <img src="https://contrib.rocks/image?repo=jijunhao/zhiyan" />
  </a>
